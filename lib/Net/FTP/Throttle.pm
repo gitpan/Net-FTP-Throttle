@@ -5,7 +5,7 @@ use Carp;
 use Fcntl qw(O_WRONLY O_RDONLY O_APPEND O_CREAT O_TRUNC);
 use Net::FTP;
 use base qw(Net::FTP);
-our $VERSION = 0.30;
+our $VERSION = "0.30";
 
 # a lot of this code was stolen from Net::FTP
 

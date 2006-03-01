@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Net-FTP-Throttle
-version: 0.3
+version: 0.30
 author:
   - Leon Brocard <acme@astray.com>
 abstract: 
