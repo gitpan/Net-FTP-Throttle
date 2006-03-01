@@ -5,7 +5,7 @@ use Carp;
 use Fcntl qw(O_WRONLY O_RDONLY O_APPEND O_CREAT O_TRUNC);
 use Net::FTP;
 use base qw(Net::FTP);
-our $VERSION = 0.29;
+our $VERSION = 0.30;
 
 # a lot of this code was stolen from Net::FTP
 
@@ -20,6 +20,8 @@ sub new {
   my $package = shift;
   my $self    = $package->SUPER::new(@_);
 
+  return unless $self;
+  
   my ($peer, %arg);
   if (@_ % 2) {
     $peer = shift;
