@@ -1,4 +1,3 @@
-Build.PL
 CHANGES
 lib/Net/FTP/Throttle.pm
 Makefile.PL

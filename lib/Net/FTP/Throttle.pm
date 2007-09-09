@@ -7,7 +7,7 @@ use Fcntl qw(O_WRONLY O_RDONLY O_APPEND O_CREAT O_TRUNC);
 use Net::FTP;
 use Time::HiRes qw(sleep);
 use base qw(Net::FTP);
-our $VERSION = "0.31";
+our $VERSION = "0.32";
 
 # a lot of this code was stolen from Net::FTP
 
@@ -34,7 +34,7 @@ sub new {
     }
 
     my $mbps = $arg{MegabitsPerSecond} || croak "No MegabitsPerSecond passed";
-    my $bps  = $mbps * 1024 * 1024 / 8;
+    my $bps = $mbps * 1024 * 1024 / 8;
 
     my $bucket = new Algorithm::TokenBucket $bps, 10240;
     ${*$self}{'tokenbucket'} = $bucket;
@@ -255,7 +255,7 @@ sub _store_cmd {
 
 __END__
 
-=head1 TITLE
+=head1 NAME
 
 Net::FTP::Throttle - Throttle FTP connections
 
